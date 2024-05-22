@@ -50,8 +50,8 @@ io.sockets.on('connection', function(socket){
 // http.listen(2002, function(){
 //   console.log('listening on *:2002');
 // });
-http.listen(2002, '3.34.177.187',function(){
-	console.log('listening on 3.34.177.187:2002');
+http.listen(2002, '0.0.0.0',function(){
+	console.log('listening on :2002');
   });
 
 setInterval(function(){
@@ -76,4 +76,4 @@ setInterval(function(){
 		}
     }
 	if (pack.length>0) io.emit('remoteData', pack);
-}, 40);
+}, 100);
